@@ -1,4 +1,4 @@
-import {Dragon, Status} from "types/index";
+import { Status, Dragon, WorkedDragon} from "types/index";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import { Axios } from "axios";
 export const loadDragon = createAsyncThunk<{data: Dragon}, undefined, 
@@ -9,7 +9,7 @@ export const loadDragon = createAsyncThunk<{data: Dragon}, undefined,
 	"@@dragon/load-dragon",
 	async(_, {extra: {axios}, rejectWithValue})=>{
 		try {
-			const response = axios.get("https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f")
+			const response = await axios.get("https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f")
 			return response;	
 		} catch (error) {
 			return rejectWithValue("Something went wrong. Please reload cite!")
@@ -18,13 +18,13 @@ export const loadDragon = createAsyncThunk<{data: Dragon}, undefined,
 )
 type DragonsSlice = {
 	status : Status,
-	list: any,
+	list: Dragon| null ,
 	error: null | string
 }
 const initialState: DragonsSlice ={
 	status: "idle",
-	list: {},
-	error: null
+	list: null,
+	error: ""
 }
 const dragonsSlice = createSlice({
 	name: "@@dragon",
@@ -35,10 +35,13 @@ const dragonsSlice = createSlice({
 			state.status= "loading"
 		})
 		builder.addCase(loadDragon.rejected, (state, action) =>{
+			console.log(action);
 			state.error = action.payload || "Unknow error.";
+			state.status = "rejected";
 		})
 		builder.addCase(loadDragon.fulfilled, (state, action) =>{
 			state.list = action.payload.data;
+			state.status = "received"
 		})
 	},
 });

@@ -1,3 +1,9 @@
+//CSS
+import "./dragon.scss";
+//Icon
+import Loading from "assets/icons/loading.svg"
+//Types
+import { Dragon, } from "types";
 //REDUX HOOKS
 import {useAppDispatch, useAppSelector} from "redux-hooks";
 //Actions
@@ -6,22 +12,43 @@ import { loadDragon } from "./dragonSlice";
 import {selectDragon} from "./dragonSelectors";
 //REACT HOOKS
 import {useEffect} from "react";
-import { DragonDetails } from "./DragonDetails";
-import { DragonImage } from "../../components/Carousel/DragonImages";
+//Component
+import { DragonImage } from "components/Carousel/DragonImages";
+import {DragonDetailsLeft} from "components/DragonDetailsLeft/DragonDetailsLeft";
+import {DragonDetailsRight} from "components/DragonDetailsRight/DragonDetailsRight";
+import { DragonDescription } from "components/DragonDescription/DragonDescription";
+import { DragonDetailtTop } from "components/DragonDetailsTop/DragonDetailsTop";
+import { DragonDetailtBottom } from "components/DragonDetailsBottom/DragonDetailsBottom";
 export const DragonsList = () =>{
 	const dispatch  = useAppDispatch();
 	const {status, list, error} = useAppSelector(selectDragon);
 	useEffect(() =>{
-		dispatch(loadDragon())
-	}, [])
-	const {flickr_images} = list;
+		dispatch(loadDragon());
+		if (list) {
+			localStorage.setItem("dragon", JSON.stringify(list))
+		}
+	}, []);
+	const localData: any = localStorage.getItem("dragon");
+	const data = JSON.parse(localData);
 	return (
 		<div className="main__content">
 			{
-				list  && <DragonImage images={flickr_images}/>
+				status === "loading" && <img src={Loading} className="loading" alt="loading"/>
 			}
 			{
-				list  && <DragonDetails key={list.id} {...list}/> 
+				status === "rejected" && <h2 className="error_message">{error}</h2>
+			}
+			{
+				data  &&<>
+				<DragonDetailtTop height_w_trunk={data.height_w_trunk}/>
+							<div className="main__flex">
+								<DragonDetailsLeft launch_payload_mass={data.launch_payload_mass} />
+								<DragonImage images={data.flickr_images}/>
+								<DragonDetailsRight launch_payload_vol={data.launch_payload_vol}/>
+							</div>
+								<DragonDetailtBottom diameter={data.diameter}/>
+								<DragonDescription name={data.name} description={data.description} type={data.type} wikipedia={data.wikipedia}/>
+						</>
 			}
 		</div>
 	)

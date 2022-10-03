@@ -6,13 +6,12 @@ interface DragonImageProps {
 	images: string[]
 }
 export const DragonImage = ({images}: DragonImageProps) =>{
-
 	return (
 		<div className="main__carousel">
 			<div className="carousel__container">
 		<Carousel>
 			{
-				images && images.map((src: string) =><Carousel.Item interval={2000}>
+				images && images.map((src: string) =><Carousel.Item key={src} interval={2000}>
 				<img
 				  className="d-block w-100 carousel__img"
 				  src={src}

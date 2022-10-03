@@ -1,0 +1,13 @@
+.main__details {
+	//display: flex;
+}
+.main__details__item {
+	//flex: 0 1 50%;
+	width: 180px;
+	height: 180px;
+	background: rgba(255, 255, 255, 0.02);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

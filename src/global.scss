@@ -11,9 +11,9 @@
 	src: url(./assets/fonts/Lato-Light.ttf);
 }
 body {
-	background-color: #1a1c48;
-	font-family: "Loto-bold";
-	color: white;
+	background-color: #1a1c48 !important;
+	font-family: "Loto-bold" !important;
+	color: white !important;
 }
 .wrapper {
 	display: flex;
