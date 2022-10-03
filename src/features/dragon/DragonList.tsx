@@ -14,11 +14,11 @@ import {selectDragon} from "./dragonSelectors";
 import {useEffect} from "react";
 //Component
 import { DragonImage } from "components/Carousel/DragonImages";
-import {DragonDetailsLeft} from "components/DragonDetailsLeft/DragonDetailsLeft";
-import {DragonDetailsRight} from "components/DragonDetailsRight/DragonDetailsRight";
+import {DragonDetailsLeft} from "components/Details/DragonDetailsLeft";
+import {DragonDetailsRight} from "components/Details/DragonDetailsRight";
 import { DragonDescription } from "components/DragonDescription/DragonDescription";
-import { DragonDetailtTop } from "components/DragonDetailsTop/DragonDetailsTop";
-import { DragonDetailtBottom } from "components/DragonDetailsBottom/DragonDetailsBottom";
+import { DragonDetailtTop } from "components/Details/DragonDetailsTop";
+import { DragonDetailtBottom } from "components/Details/DragonDetailsBottom";
 export const DragonsList = () =>{
 	const dispatch  = useAppDispatch();
 	const {status, list, error} = useAppSelector(selectDragon);
@@ -33,7 +33,7 @@ export const DragonsList = () =>{
 	return (
 		<div className="main__content">
 			{
-				status === "loading" && <img src={Loading} className="loading" alt="loading"/>
+				status === "loading" && !data && <img src={Loading} className="loading" alt="loading"/>
 			}
 			{
 				status === "rejected" && <h2 className="error_message">{error}</h2>

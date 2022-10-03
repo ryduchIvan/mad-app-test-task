@@ -1,5 +1,5 @@
 //CSS
-import "./dragonDetails.scss";
+import "./detailsBox.scss";
 
 import {Dragon} from "types/dragon";
 type DragonDetailtTopProps = Pick<Dragon, "height_w_trunk">
@@ -9,7 +9,7 @@ export const DragonDetailtTop = ({height_w_trunk}: DragonDetailtTopProps) =>{
 	return (
 		<div className="main__details main__details_top">
 		<div className="main__details__item">
-					<div className="main__details__circle green">
+					<div className="main__details__circle purple">
 						</div>
 						<div className="main__details__info">
 							{height_w_trunk.meters}
@@ -17,7 +17,7 @@ export const DragonDetailtTop = ({height_w_trunk}: DragonDetailtTopProps) =>{
 						</div>
 					</div>
 					<div className="main__details__item">
-					<div className="main__details__circle green">
+					<div className="main__details__circle pink">
 						</div>
 						<div className="main__details__info">
 							{height_w_trunk.feet}

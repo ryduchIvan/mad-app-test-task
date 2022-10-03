@@ -1,5 +1,5 @@
 import {Dragon} from "types/index";
-import "./dragonDetailsRight.scss";
+import "./detailsBox.scss";
 type DragonDetailsRightProps =  Pick<Dragon, "launch_payload_vol">
 export const DragonDetailsRight = ({launch_payload_vol}:DragonDetailsRightProps )=>{
 	return (
