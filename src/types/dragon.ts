@@ -16,6 +16,7 @@ type DragonDiameter = {
 	feet: number
 }
 export type Dragon = {
+	id: string
 	flickr_images: string[],
 	description: string,
 	name: string,

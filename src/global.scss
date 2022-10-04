@@ -27,14 +27,9 @@ body {
 	padding-left: 30px;
 	padding-right: 30px;
 }
-.header {
-	flex: 0 1 1;
-}
+
 .main {
 	flex: 1 1 0;
-}
-.footer {
-	flex: 0 1 1;
 }
 
 /* Указываем box sizing */
@@ -57,8 +52,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -66,6 +61,7 @@ blockquote,
 dl,
 dd {
 	margin: 0;
+	padding: 0px;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
@@ -77,8 +73,8 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+ul,
+ol {
 	list-style: none;
 }
 

@@ -1,9 +1,9 @@
 import {configureStore, combineReducers} from "@reduxjs/toolkit";
 import axios from "axios";
 //Reducers
-import{dragonsReducer} from "./features/dragon/dragonSlice";
+import {dragonsReducer} from "./features/dragons/dragonsSlice";
 const rootReducer = combineReducers({
-	dragon: dragonsReducer
+	dragons: dragonsReducer
 });
 
 export const store = configureStore({
