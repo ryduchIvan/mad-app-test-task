@@ -15,14 +15,16 @@ export const DragonDetailtTop = ({height_w_trunk}: DragonDetailtTopProps) =>{
 							{height_w_trunk.meters}
 							<span>meters</span>
 						</div>
+						<h4 className="details__name">Height</h4>
 					</div>
 					<div className="main__details__item">
 					<div className="main__details__circle pink">
 						</div>
 						<div className="main__details__info">
-							{height_w_trunk.feet}
-							<span>feets</span>
-						</div>
+						{height_w_trunk.feet}
+						<span>feets</span>
+					</div>
+					<h4 className="details__name">Height</h4>
 			</div>
 		</div>
 	)

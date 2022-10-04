@@ -1,5 +1,6 @@
 //CSS
 import "./dragons.scss";
+//SVG
 import loading  from "../../assets/icons/loading.svg";
 //REACT HOOKS
 import {useEffect, useState} from "react";

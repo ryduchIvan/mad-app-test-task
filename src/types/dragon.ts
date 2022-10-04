@@ -5,7 +5,7 @@ type DragonsMass = {
 
 type DragonVolume = {
 	cubic_meters: number,
-	cubic__feet: number
+	cubic_feet: number
 }
 type DragonHeigth = {
 	meters: number,

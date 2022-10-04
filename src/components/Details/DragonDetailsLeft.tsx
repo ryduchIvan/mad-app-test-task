@@ -15,6 +15,7 @@ export const DragonDetailsLeft = ({launch_payload_mass}: DragonDetailsLeftProps)
 							{launch_payload_mass.kg}
 							<span>KG</span>
 						</div>
+						<h4 className="details__name">Weight</h4>
 					</div>
 					<div className="main__details__item">
 					<div className="main__details__circle red">
@@ -23,6 +24,7 @@ export const DragonDetailsLeft = ({launch_payload_mass}: DragonDetailsLeftProps)
 							{launch_payload_mass.lb}
 							<span>LB</span>
 						</div>
+						<h4 className="details__name">Weight</h4>
 					</div>
 				</>
 			}

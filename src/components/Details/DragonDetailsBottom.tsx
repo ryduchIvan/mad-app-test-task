@@ -15,6 +15,7 @@ export const DragonDetailtBottom = ({diameter}: DragonDetailsBottomProps) => {
 							{diameter.meters}
 							<span>meters</span>
 						</div>
+						<h4 className="details__name">Diameter</h4>
 					</div>
 					<div className="main__details__item">
 					<div className="main__details__circle white">
@@ -23,6 +24,7 @@ export const DragonDetailtBottom = ({diameter}: DragonDetailsBottomProps) => {
 							{diameter.feet}
 							<span>feets</span>
 						</div>
+						<h4 className="details__name">Diameter</h4>
 					</div>
 		</div>
 	)

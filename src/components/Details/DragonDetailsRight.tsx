@@ -10,7 +10,10 @@ export const DragonDetailsRight = ({launch_payload_vol}:DragonDetailsRightProps 
 					<div className="main__details__item">
 						<div className="main__details__circle aqua">
 						</div>
-						<div className="main__details__info">{launch_payload_vol.cubic__feet} 43<span>feets</span></div>
+						<div className="main__details__info">{launch_payload_vol.cubic_feet}
+						<span>feets</span>
+						</div>
+						<h4 className="details__name">Volume</h4>
 					</div>
 					<div className="main__details__item">
 						<div className="main__details__circle gold"></div>
@@ -18,6 +21,7 @@ export const DragonDetailsRight = ({launch_payload_vol}:DragonDetailsRightProps 
 							{launch_payload_vol.cubic_meters}
 							<span>metters</span>
 						</div>
+						<h4 className="details__name">Volume</h4>
 					</div>
 				</>
 			}
