@@ -3,9 +3,11 @@ import axios from "axios";
 //Reducers
 import {dragonsReducer} from "./features/dragons/dragonsSlice";
 import {detailsReducer} from "./features/details/detailsSlice";
+import {userReducer} from "./features/user/userSlice";
 const rootReducer = combineReducers({
 	dragons: dragonsReducer,
-	details: detailsReducer
+	details: detailsReducer,
+	user: userReducer
 });
 
 export const store = configureStore({
