@@ -4,10 +4,12 @@ import axios from "axios";
 import {dragonsReducer} from "./features/dragons/dragonsSlice";
 import {detailsReducer} from "./features/details/detailsSlice";
 import {userReducer} from "./features/user/userSlice";
+import {favoriteReducer} from "./features/favorite/favoriteSlice";
 const rootReducer = combineReducers({
 	dragons: dragonsReducer,
 	details: detailsReducer,
-	user: userReducer
+	user: userReducer,
+	favorite: favoriteReducer
 });
 
 export const store = configureStore({

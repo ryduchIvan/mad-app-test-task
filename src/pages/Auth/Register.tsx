@@ -1,13 +1,16 @@
-import { SignUp } from "components/user/SignUp";
+//CSS
+import "./auth.scss";
+
+import { SignUp } from "components/User/SignUp";
 import {Link} from "react-router-dom";
 
 export const Register = () =>{
 
 	return (
-		<div>
-			<h2>Register</h2>
+		<div className="auth">
+			<h2 className="auth__title">Register</h2>
 			<SignUp/>
-			<p>
+			<p className="auth__text">
 				Already have an account ? <Link to="/login">Login in</Link>
 			</p>
 		</div>

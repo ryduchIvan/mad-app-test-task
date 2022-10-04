@@ -4,6 +4,7 @@ import {setUser, removerUser} from "features/user/userSlice";
 import {useNavigate} from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 export const Login = () =>{
+	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
 	const handleLogin = (email: string, password: string) =>{
 		const auth = getAuth();
@@ -19,7 +20,6 @@ export const Login = () =>{
 		})
 		.catch(() => alert("Error user!"));
 	};
-	const dispatch = useAppDispatch();
 	return(
 		<Form title="sing in" handleClick={handleLogin}></Form>
 	)

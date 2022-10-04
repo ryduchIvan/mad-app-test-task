@@ -6,7 +6,6 @@ import {removerUser} from "features/user/userSlice";
 export const HomePage = () =>{
 	const {isAuth, email} = useAuth();
 	const dispatch = useAppDispatch();
-	console.log(isAuth);
 	return isAuth ? (
 		<>
 			<Main/>

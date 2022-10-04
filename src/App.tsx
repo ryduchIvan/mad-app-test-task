@@ -4,11 +4,13 @@ import "./global.scss";
 //Components
 import { HomePage } from 'pages/HomePage';
 import {DetailsPage } from 'pages/DetailsPage';
-import {LoginPage} from "pages/LoginPage";
-import { Register } from 'pages/Register';
+import {LoginPage} from "pages/Auth/LoginPage";
+import { Register } from 'pages/Auth/Register';
+import { Header } from 'components/Header/Header';
 function App() {
   return (
     <div className="wrapper">
+      <Header/>
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/details' element={<DetailsPage/>}/>
