@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mad-app-test-task/static/css/main.7a966fdb.css",
+    "main.js": "/mad-app-test-task/static/js/main.3307c84b.js",
+    "static/js/787.987bed8b.chunk.js": "/mad-app-test-task/static/js/787.987bed8b.chunk.js",
+    "static/media/space.jpg": "/mad-app-test-task/static/media/space.e8c19535e8aebf67305a.jpg",
+    "static/media/Lato-Light.ttf": "/mad-app-test-task/static/media/Lato-Light.c7400fcad9e48ca9043f.ttf",
+    "static/media/Lato-Regular.ttf": "/mad-app-test-task/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
+    "static/media/Lato-Bold.ttf": "/mad-app-test-task/static/media/Lato-Bold.636be8de934918e38ed9.ttf",
+    "static/media/close-svgrepo-com.svg": "/mad-app-test-task/static/media/close-svgrepo-com.7a965f0249a8c2086fe34b308c34ea99.svg",
+    "static/media/close.svg": "/mad-app-test-task/static/media/close.18990e37e99743a84f0d6298dab4cea2.svg",
+    "static/media/heart.svg": "/mad-app-test-task/static/media/heart.9de97ac80691c66d8a209da614fbfcb5.svg",
+    "static/media/loading.svg": "/mad-app-test-task/static/media/loading.6d3c304174e490170c011f0e26da1d8e.svg",
+    "index.html": "/mad-app-test-task/index.html",
+    "main.7a966fdb.css.map": "/mad-app-test-task/static/css/main.7a966fdb.css.map",
+    "main.3307c84b.js.map": "/mad-app-test-task/static/js/main.3307c84b.js.map",
+    "787.987bed8b.chunk.js.map": "/mad-app-test-task/static/js/787.987bed8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a966fdb.css",
+    "static/js/main.3307c84b.js"
+  ]
+}
