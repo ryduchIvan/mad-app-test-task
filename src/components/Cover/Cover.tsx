@@ -1,7 +1,8 @@
+//CSS
 import "./cover.scss";
-import cover from "assets/img/cover.jpg";
+//IMG
+import cover from "assets/img/space.jpg";
 export const Cover = () =>{
-
 	return (
 		<div className="main__cover">
 			<h1 className="cover__title">DRAGONS BY SpaceX</h1>

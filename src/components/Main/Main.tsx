@@ -2,8 +2,6 @@
 import { DragonsList } from "features/dragons/DragonsList";
 import { Cover } from "components/Cover/Cover";
 export const Main = () =>{
-
-
 	return (
 		<main className="main">
 			<Cover/>

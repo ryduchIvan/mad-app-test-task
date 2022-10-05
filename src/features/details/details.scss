@@ -16,4 +16,15 @@
 }
 .details__flex__img {
 	width: 700px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+@media (max-width: 1125px) {
+	.details__flex {
+		flex-direction: column;
+		margin: 0px auto 0px auto;
+	}
+	.details__flex__img {
+		width: 100%;
+	}
 }

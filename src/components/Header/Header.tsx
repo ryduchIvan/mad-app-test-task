@@ -8,6 +8,7 @@ import { useState } from "react";
 import { selectFavorite } from "features/favorite/selectorFavorite";
 //Components
 import {FavoriteList} from "features/favorite/FavoriteList";
+import {Link} from "react-router-dom"
 export const Header = () =>{
 	const [isFavortie, setFavorite] = useState(false);
 	const list = useAppSelector(selectFavorite);
@@ -18,7 +19,7 @@ export const Header = () =>{
 	return (
 		<header className="header">
 			<div className="header__container container">
-				<div className="header__logo">Space X</div>
+				<Link to="/"><div className="header__logo">Space X</div></Link>
 				<div className="header__favorite">
 						<span className="header__quantity">
 						{

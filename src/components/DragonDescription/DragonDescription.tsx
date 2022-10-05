@@ -24,7 +24,7 @@ export const DragonDescription = ({description, name, type, wikipedia}: DragonDe
 			</div>
 			<div className="desc__item">
 				<div className="desc__wikipedia">
-					<span>Link:</span> <a href={wikipedia}>{wikipedia}</a>
+					<span>Link:</span> <a target="_blank" href={wikipedia} rel="noreferrer">{wikipedia}</a>
 				</div>
 			</div>
 		</div>

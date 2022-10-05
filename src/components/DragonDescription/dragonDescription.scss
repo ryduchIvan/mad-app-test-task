@@ -1,26 +1,20 @@
 .main__desc {
 	max-width: 1000px;
 	margin: 30px auto;
-	background: rgba(255, 255, 255, 0.02);
-	padding-top: 15px;
-	padding-bottom: 15px;
+	background: white;
 	border-radius: 30px;
 }
 .desc__item {
 	padding: 20px;
 	font-size: 24px;
+	color: #1a1c48;
 	span {
 		font-size: 20px;
-		font-family: "Loto-regular";
-		color: white;
-		color: #9499c3;
+		font-family: "Loto-bold";
 	}
 	&:nth-child(2n) {
-		background-color: #9499c3;
-		color: darkblue;
-		span {
-			color: black;
-		}
+		background-color: rgb(5, 5, 64);
+		color: white;
 	}
 }
 .desc__text {
@@ -30,6 +24,6 @@
 	font-size: 16px;
 	a {
 		text-decoration: none;
-		color: darkblue;
+		color: white;
 	}
 }

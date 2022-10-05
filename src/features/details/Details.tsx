@@ -4,10 +4,10 @@ import "./details.scss";
 import {Dragon} from "types"
 //Components
 import { DragonImage } from "components/Carousel/DragonImages"
-import { DragonDetailsLeft } from "components/Details/DragonDetailsLeft"
-import { DragonDetailsRight } from "components/Details/DragonDetailsRight"
-import { DragonDetailtTop } from "components/Details/DragonDetailsTop"
-import { DragonDetailtBottom } from "components/Details/DragonDetailsBottom"
+import { DragonDetailsLeft } from "components/DetailsInfo/DragonDetailsLeft"
+import { DragonDetailsRight } from "components/DetailsInfo/DragonDetailsRight"
+import { DragonDetailtTop } from "components/DetailsInfo/DragonDetailsTop"
+import { DragonDetailtBottom } from "components/DetailsInfo/DragonDetailsBottom"
 import { DragonDescription } from "components/DragonDescription/DragonDescription";
 export const Details = ({name, description, type, height_w_trunk, wikipedia, launch_payload_mass, launch_payload_vol, flickr_images, diameter}: Dragon) =>{
 	return (

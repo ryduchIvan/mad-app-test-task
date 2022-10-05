@@ -27,13 +27,3 @@ export type Dragon = {
 	height_w_trunk: DragonHeigth,
 	diameter: DragonDiameter
 }
-
-export type WorkedDragon = {
-	images: Dragon["flickr_images"],
-	description: Dragon["description"],
-	name: Dragon["name"],
-	wikipedia:Dragon["wikipedia"],
-	type:Dragon["type"],
-	mass: Dragon["launch_payload_mass"],
-	volume: Dragon["launch_payload_vol"]
-}

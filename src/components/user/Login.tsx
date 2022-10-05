@@ -1,6 +1,6 @@
 import {Form} from "./Form";
 import {useAppDispatch} from "redux-hooks";
-import {setUser, removerUser} from "features/user/userSlice";
+import {setUser} from "features/user/userSlice";
 import {useNavigate} from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 export const Login = () =>{

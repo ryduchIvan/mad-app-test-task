@@ -6,7 +6,7 @@
 	cursor: pointer;
 }
 .favorite__list {
-	width: 500px;
+	width: 100%;
 	background-color: white;
 	border-radius: 40px;
 	position: absolute;
@@ -24,6 +24,7 @@
 }
 .favorite__title_main {
 	text-align: center;
+	color: black;
 	border-bottom: 1px solid black;
 }
 .favorite__close {
@@ -85,8 +86,8 @@
 }
 .favorite__item {
 	border-bottom: 1px solid rgb(142, 142, 142);
-	padding-bottom: 15px;
-	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
 	position: relative;
 	&:last-child {
 		border: none;
@@ -121,4 +122,9 @@
 .favorite__title {
 	font-size: 24px;
 	font-family: "Loto-bold";
+}
+@media (max-width: 925px) {
+	.favorite__img {
+		height: 300px;
+	}
 }

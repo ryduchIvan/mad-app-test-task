@@ -34,4 +34,3 @@ const favoriteSlice = createSlice({
 export const favoriteReducer = favoriteSlice.reducer;
 //Actions
 export const {addToFavorite, removeFromCart} = favoriteSlice.actions;
-//Select

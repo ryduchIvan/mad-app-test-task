@@ -17,7 +17,7 @@ export const FavoriteList = ({status, closeFavorite}: FavoriteListProps) =>{
 	console.log(status);
 	return(
 		<div className={`${status ? "favorite__list show-favorite" : "favorite__list"}`}>
-			<h1 className="favorite__title_main">Favorite Item</h1>
+			<h2 className="favorite__title_main">Favorite Item</h2>
 				<img src={CloseImg} alt="close" className="favorite__close" onClick={() =>{
 					closeFavorite()
 				}} />

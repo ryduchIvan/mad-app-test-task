@@ -33,7 +33,7 @@ export const DetailsPage = () =>{
 				status === "rejected" && <h2 className="error_message">{error}</h2>
 			}
 			{
-					list && <Details {...list}/>
+					data && <Details {...data}/>
 			}
 			</div>
 		</div>

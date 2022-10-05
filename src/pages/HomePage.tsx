@@ -1,11 +1,10 @@
+//HOOKS
 import {Navigate} from "react-router-dom";
-import { Main } from "components/Main/Main"
 import { useAuth } from "auth/use-auth";
-import { useAppDispatch } from "redux-hooks";
-import {removerUser} from "features/user/userSlice";
+//Components
+import { Main } from "components/Main/Main"
 export const HomePage = () =>{
-	const {isAuth, email} = useAuth();
-	const dispatch = useAppDispatch();
+	const {isAuth} = useAuth();
 	return isAuth ? (
 		<>
 			<Main/>
