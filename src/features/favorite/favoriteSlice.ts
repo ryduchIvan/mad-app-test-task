@@ -1,7 +1,13 @@
 import {createSlice} from "@reduxjs/toolkit";
 import { Dragon } from "types";
 
-const initialState: Dragon[] = [];
+interface favoriteSlice {
+	list: Dragon[]
+}
+
+const initialState: favoriteSlice = {
+	list: []
+};
 
 const favoriteSlice = createSlice({
 	name: "@@favorite",
@@ -9,21 +15,21 @@ const favoriteSlice = createSlice({
 	reducers: {
 		addToFavorite: (state, action) => {
 			const id = action.payload.id;
-			const itemIndex = state.findIndex(item => item.id === id);
+			const itemIndex = state.list.findIndex(item => item.id === id);
 			if (itemIndex < 0) {
 				const newItem = {
 					...action.payload,
 				}
-				state.push(newItem);
+				state.list.push(newItem);
 			} else {
 				return state
 			}
 		},
 		removeFromCart: (state, action) => {
 			const id = action.payload;
-			state.forEach((item, index) => {
+			state.list.forEach((item, index) => {
 				if (item.id === id) {
-					return state.splice(index, 1);
+					return state.list.splice(index, 1);
 				}
 			})
 		},

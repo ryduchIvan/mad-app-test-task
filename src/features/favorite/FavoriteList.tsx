@@ -13,7 +13,7 @@ interface FavoriteListProps {
 	closeFavorite: () => void
 }
 export const FavoriteList = ({status, closeFavorite}: FavoriteListProps) =>{
-	const list = useAppSelector(selectFavorite);
+	const {list} = useAppSelector(selectFavorite);
 	console.log(status);
 	return(
 		<div className={`${status ? "favorite__list show-favorite" : "favorite__list"}`}>

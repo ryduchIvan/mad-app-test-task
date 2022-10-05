@@ -11,7 +11,7 @@ import {FavoriteList} from "features/favorite/FavoriteList";
 import {Link} from "react-router-dom"
 export const Header = () =>{
 	const [isFavortie, setFavorite] = useState(false);
-	const list = useAppSelector(selectFavorite);
+	const {list} = useAppSelector(state => state.favorite);
 	const closeFavorite = () =>{
 		setFavorite(false);
 		console.log(isFavortie);
