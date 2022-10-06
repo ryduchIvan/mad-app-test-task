@@ -17,7 +17,7 @@ export const SignUp = () =>{
 			}));
 			navigate("/")
 		})
-		.catch((error) => alert("this password account exists"));
+		.catch((error) => alert("this account already exists"));
 	};
 	return(
 		<Form title="register" handleClick={handleRegister}/>

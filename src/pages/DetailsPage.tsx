@@ -20,7 +20,7 @@ export const DetailsPage = () =>{
 		if (list) {
 			localStorage.setItem("details", JSON.stringify(list));
 		}
-	}, [])
+	}, [dispatch])
 	const localDragon: any = localStorage.getItem("details");
 	const data: Dragon = JSON.parse(localDragon) || list;
 	return (

@@ -26,8 +26,8 @@ export const DragonsItem = ({name, type, flickr_images, description, id}:DragonI
 		<Link to="/details" onClick={() =>{
 					dispatch(setId(id))
 					}}>
-			<DragonImage images={flickr_images}/>
-		</Link>
+				</Link>
+		<div className="dragon__carousel"><DragonImage images={flickr_images}/></div>
 		<div className="dragon__info">
 			<ul className="dragon__info__list">
 				<li className="dragon__text">

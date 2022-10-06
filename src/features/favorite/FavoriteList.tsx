@@ -14,7 +14,6 @@ interface FavoriteListProps {
 }
 export const FavoriteList = ({status, closeFavorite}: FavoriteListProps) =>{
 	const {list} = useAppSelector(selectFavorite);
-	console.log(status);
 	return(
 		<div className={`${status ? "favorite__list show-favorite" : "favorite__list"}`}>
 			<h2 className="favorite__title_main">Favorite Item</h2>

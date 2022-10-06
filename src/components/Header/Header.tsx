@@ -5,7 +5,6 @@ import Heart from "assets/icons/heart.svg";
 //HOOKS
 import { useAppSelector} from "redux-hooks";
 import { useState } from "react";
-import { selectFavorite } from "features/favorite/selectorFavorite";
 //Components
 import {FavoriteList} from "features/favorite/FavoriteList";
 import {Link} from "react-router-dom"
@@ -14,12 +13,11 @@ export const Header = () =>{
 	const {list} = useAppSelector(state => state.favorite);
 	const closeFavorite = () =>{
 		setFavorite(false);
-		console.log(isFavortie);
 	}
 	return (
 		<header className="header">
 			<div className="header__container container">
-				<Link to="/"><div className="header__logo">Space X</div></Link>
+				<Link to="/" className="header__logo">Space X</Link>
 				<div className="header__favorite">
 						<span className="header__quantity">
 						{

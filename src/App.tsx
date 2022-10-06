@@ -7,6 +7,7 @@ import {DetailsPage } from 'pages/DetailsPage';
 import {LoginPage} from "pages/Auth/LoginPage";
 import { Register } from 'pages/Auth/Register';
 import { Header } from 'components/Header/Header';
+import { NotFoundPage } from "pages/NotFoundPage";
 function App() {
   return (
     <div className="wrapper">
@@ -16,6 +17,7 @@ function App() {
         <Route path='/details' element={<DetailsPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path="*" element={<NotFoundPage/>}/>
       </Routes>
     </div>
   );

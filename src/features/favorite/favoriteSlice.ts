@@ -1,15 +1,15 @@
 import {createSlice} from "@reduxjs/toolkit";
 import { Dragon } from "types";
 
-interface favoriteSlice {
+interface favoriteSliceI {
 	list: Dragon[]
 }
 
-const initialState: favoriteSlice = {
+const initialState: favoriteSliceI = {
 	list: []
 };
 
-const favoriteSlice = createSlice({
+ const favoriteSlice = createSlice({
 	name: "@@favorite",
 	initialState,
 	reducers: {

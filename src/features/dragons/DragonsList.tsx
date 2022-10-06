@@ -21,7 +21,7 @@ export const DragonsList = () =>{
 		if (list.length > 0) {
 			localStorage.setItem("dragons", JSON.stringify(list))
 		}
-	}, []);
+	}, [dispatch]);
 	const localData: any = localStorage.getItem("dragons");
 	const data: Dragon[] = JSON.parse(localData) || list;
 	return (

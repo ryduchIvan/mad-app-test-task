@@ -9,6 +9,7 @@
 	flex: 0 1 100%;
 	margin-bottom: 50px;
 	display: flex;
+	justify-content: space-between;
 	text-align: right;
 	&:nth-child(2n) {
 		text-align: left;
@@ -17,13 +18,10 @@
 }
 .dragon__info {
 	flex: 0 1 50%;
-	margin-left: 30px;
+	margin-right: 10px;
 	background-color: rgb(33, 33, 77);
 	padding: 30px;
 	border-radius: 50px;
-	&:nth-child(2n) {
-		margin-right: 30px;
-	}
 }
 .dragon__text {
 	margin-bottom: 20px;

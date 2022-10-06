@@ -16,9 +16,8 @@ export const Login = () =>{
 				token: user.refreshToken,
 			}));
 			navigate("/")
-			console.log(22);
 		})
-		.catch(() => alert("Error user!"));
+		.catch(() => alert("Error password or email!"));
 	};
 	return(
 		<Form title="sing in" handleClick={handleLogin}></Form>
